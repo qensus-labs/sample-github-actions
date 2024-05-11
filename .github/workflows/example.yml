@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  example_job:
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
+    name: A job to show example
+    steps:
+      - name: CSPDriver step
+        id: example
+        uses: dapr/setup-dapr@v1
+        with:
+          version: '1.2.0'
